@@ -23,7 +23,7 @@ class DriveSquare(Node):
 
     def execute_turn(self):
         msg = Twist()
-        msg.angular.z = (pi / 2) 
+        msg.angular.z = (pi / 4) 
         self.vel_pub.publish(msg)
 
     def execute_straight(self):
