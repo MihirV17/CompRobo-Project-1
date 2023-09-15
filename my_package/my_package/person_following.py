@@ -15,7 +15,7 @@ class PersonFollower(Node):
         
 
     def laser_callback(self, scan_data:LaserScan):
-        min_distance =50
+        min_distance =100
         range_check =.1
         
         for range_val in range(len(scan_data.ranges)):
@@ -31,10 +31,10 @@ class PersonFollower(Node):
         if baseline<self.scan<10 or 350 <self.scan<360:
             pass
         elif self.scan >midline:
-            vel.angular.z=-.5
+            vel.angular.z=-.4
             
         else:
-            vel.angular.z=.5
+            vel.angular.z=.4
         if baseline<self.scan<60 or 300<self.scan<360:
             vel.linear.x=.2
         self.speed_pub.publish(vel)
