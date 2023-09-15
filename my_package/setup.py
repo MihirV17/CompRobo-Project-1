@@ -23,7 +23,9 @@ setup(
             'my_node = my_package.my_node:main',
             'wall_follower = my_package.wall_follower:main',
             'drive_square = my_package.drive_square:main',
-            'teleop = my_package.teleop:main'
+            'teleop = my_package.teleop:main',
+            'person_following = my_package.person_following:main',
+            'obstacle_avoidance = my_package.obstacle_avoidance:main'
         ],
     },
 )
