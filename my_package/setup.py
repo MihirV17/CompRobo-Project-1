@@ -21,9 +21,10 @@ setup(
     entry_points={
         'console_scripts': [
             'my_node = my_package.my_node:main',
-            'wall_follower = my_package.wall_follower:main',
+            'wall_following = my_package.wall_following:main',
             'drive_square = my_package.drive_square:main',
-            'teleop = my_package.teleop:main'
+            'teleop = my_package.teleop:main',
+            'finite_state_controller = my_package.finite_state_controller:main'
         ],
     },
 )
