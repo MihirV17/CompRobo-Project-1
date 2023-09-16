@@ -2,16 +2,14 @@
 ## By Kenta Terasaki, Mihir Vemuri
 For the warmup comprobo project we explored the robot platform for the course, a Neato vacuuming robot with a raspberry pi controller board. We configured it with ROS(Robot Operating System), Python in VS Code, simulated our code in the Gazebo simulator, and debugged utilizing rviz and rqt. Our main task in this project was to equip the neato with a set of behaviors, which we did utilizng our control scheme. The programs we created were a teleoperation mode for direct user control, wall following, obstacle avoidance, person following, square driving, and a finite state controller to switch between behaviors.
 
-![image](https://github.com/MihirV17/CompRobo-Warmup-Project/assets/123433158/c2cb5824-0c3d-429f-99ec-4282c8016da7)
 #### Neato Robot Platform
+![image](https://github.com/MihirV17/CompRobo-Warmup-Project/assets/123433158/c2cb5824-0c3d-429f-99ec-4282c8016da7)
 
 # Teleop Mode
 ## Planning State Diagram
 ![image](https://github.com/MihirV17/CompRobo-Warmup-Project/assets/123433158/3a7c7d4d-9480-404a-8efd-c3b91199a8e4)
 ## Description
 This script provides a basic yet effective means of teleoperating a robot via keyboard input in a ROS 2 environment, allowing for simple control of its movements. It leverages the rclpy library for ROS 2 communication and handles key presses to control a robot's linear and angular velocities. The script defines a class named TeleopKeyboard, which inherits from rclpy's Node class. This class initializes a ROS 2 node with the name 'teleop_keyboard' and creates a publisher to send velocity commands of the Twist message type to the 'cmd_vel' topic. It also sets up a timer that periodically invokes a callback function called timer_callback. Within this callback, the script monitors keyboard input, determining the key pressed, and accordingly adjusts the linear and angular velocities in the Twist message to control the robot's movement (e.g., 'w' for forward, 's' for backward, 'a' for left, 'd' for right). If no valid key is pressed, the robot stops. The main function serves as the entry point of the script, initializing the ROS 2 system, handling keyboard input in raw mode, and continuously processing ROS 2 messages. Any exceptions are caught and displayed, and the terminal settings are restored upon script termination. 
-
-
 
 # Drive Square
 ## Planning State Diagram
