@@ -38,6 +38,10 @@ A finite state controller is a program or device that operates in distinct state
 # Obstacle Avoidance
 ## Planning State Diagram
 ![image](https://github.com/MihirV17/CompRobo-Warmup-Project/assets/123433158/154e4760-fa6b-4288-aeed-d19e11714049)
+
+https://github.com/MihirV17/CompRobo-Warmup-Project/assets/123433158/93e789f9-73fd-4259-93f7-d2eb77242dcf
+
+
 ## Description
 This script enables a robot to autonomously navigate and avoid obstacles by analyzing laser scan data, making it suitable for obstacle avoidance tasks in robotics applications.
 Upon initialization, the class sets up essential components, including a publisher for sending Twist messages to control the robot's velocity ('cmd_vel') and a subscriber to gather data from the laser scanner ('scan'). A timer is established to trigger the avoid_obstacles function every 0.1 seconds ('ovr_time'). The laser_callback method is invoked whenever laser scan data is received. It stores the scan data, which provides distance measurements around the robot, enabling it to detect obstacles. The core obstacle avoidance logic is implemented in the avoid_obstacles function. It calculates the minimum distance within a specified forward-facing range (from 0 to 10 degrees and 350 to 360 degrees) using the laser scan data. If the minimum distance is less than a predefined threshold (1.0 in this case), it triggers a turning action to avoid the obstacle. The robot either turns left or right based on whether the closest obstacle is on the left or right side and stops moving forward. If there are no immediate obstacles, the robot proceeds with a slow forward motion and a slight angular correction to navigate. The main function initializes the ROS 2 system, creates an instance of the ObstacleAvoidance class, enters the ROS 2 spin loop to manage communication and control logic, and finally, shuts down the ROS 2 system upon completion.
