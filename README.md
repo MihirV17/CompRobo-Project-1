@@ -32,7 +32,6 @@ This script enables a robot to follow a person by adjusting its orientation and 
 ## Person Follow Video
 https://github.com/MihirV17/CompRobo-Warmup-Project/assets/123433158/c5092172-cc47-4feb-8de9-bd56f890b878
 
-
 # Obstacle Avoidance
 ## Planning State Diagram
 ![image](https://github.com/MihirV17/CompRobo-Warmup-Project/assets/123433158/154e4760-fa6b-4288-aeed-d19e11714049)
@@ -59,7 +58,8 @@ A finite state controller is a program or device that operates in distinct state
 
 ## Finite State Controller/Wall Follow Video
 
-https://github.com/MihirV17/CompRobo-Warmup-Project/assets/123433158/21efe92e-2032-48d6-9a44-50cb0882dbc6
+https://github.com/MihirV17/CompRobo-Warmup-Project/assets/123433158/98d319d8-470a-42e4-a562-bf6161382cbf
+
 
 
 
