@@ -18,9 +18,6 @@ This script provides a basic yet effective means of teleoperating a robot via ke
 ## Description
 This script orchestrates a robot to move in a square pattern. In the __init__ constructor, it initializes a ROS 2 node, sets up a publisher for Twist messages on 'cmd_vel', and schedules a timer with a run_loop callback. Various variables like turns_executed, executing_turn, and timing parameters manage the robot's state. The start_segment method records segment start times (straight or turn), and is_segment_done checks for completion based on a specified duration. execute_turn and execute_straight create Twist messages for angular (turn) and linear (straight) velocities. The run_loop is the central control logic. It checks segment completion, alternates between turns and straight movements, updates robot state, and prints debug info. The main function initializes ROS 2, creates a DriveSquare instance, enters the ROS 2 spin loop for control, and shuts down ROS 2 when finished. The script is flexible, allowing parameter adjustments for side length, time per side, and turn duration, making it adaptable to various square patterns or movement needs.
 
-## Drive Square Video
-https://github.com/MihirV17/CompRobo-Warmup-Project/assets/123433158/4a3bda29-6827-4051-bd40-b58b22c272f2
-
 
 # Person Follow
 ## Planning State Diagram
