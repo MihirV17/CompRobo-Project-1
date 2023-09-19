@@ -23,8 +23,8 @@ This script orchestrates a robot to move in a square pattern. In the __init__ co
 ## Description
 This program enables autonomous wall-following behavior for a robot using ROS. The WallFollow class serves as the core controller. It maintains forward_distance and backward_distance variables, representing front and rear laser scanner measurements. In the constructor (__init__), it sets up a ROS Node, schedules a loop to run at 10 Hz, and creates publishers for robot velocity commands (self.neato_pub) and laser scanner data subscriptions (self.scan_sub). The scan_callback function updates distance variables based on laser data, aiding debugging. In run_loop, it computes the required angular speed to maintain a set distance from a wall. The calculated angular speed is then used to create a Twist message, which contains angular and linear velocity components. The angular velocity is set based on the calculated value, while the linear velocity is set to move the robot forward at a constant rate. Finally, the Twist message is published to the cmd_vel topic using self.neato_pub, which sends the control commands to the robot's motors.This message is published via self.neato_pub to control the robot's motors. The main function initializes the ROS Node, creates a WallFollow instance, and enters a ROS loop for continuous execution. This program autonomously guides the robot along a wall, responding to laser scanner data.
 
-# Person Follow/Video
-## Planning State Diagram
+# Person Follow
+## Planning State Diagram/Video
 ![image](https://github.com/MihirV17/CompRobo-Warmup-Project/assets/123433158/77d767d7-e872-4543-b340-e741c1546543)
 
 
