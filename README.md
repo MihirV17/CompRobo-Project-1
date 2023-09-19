@@ -23,7 +23,7 @@ https://github.com/MihirV17/CompRobo-Warmup-Project/assets/123433158/4a3bda29-68
 
 
 # Person Follow
-## Planning State Diagram/Video
+## Planning State Diagram
 ![image](https://github.com/MihirV17/CompRobo-Warmup-Project/assets/123433158/77d767d7-e872-4543-b340-e741c1546543)
 
 ## Description
@@ -34,7 +34,7 @@ https://github.com/MihirV17/CompRobo-Warmup-Project/assets/123433158/c5092172-cc
 
 
 # Obstacle Avoidance
-## Planning State Diagram/Video
+## Planning State Diagram
 ![image](https://github.com/MihirV17/CompRobo-Warmup-Project/assets/123433158/154e4760-fa6b-4288-aeed-d19e11714049)
 
 ## Description
@@ -59,6 +59,7 @@ A finite state controller is a program or device that operates in distinct state
 
 ## Finite State Controller/Wall Follow Video
 
+https://github.com/MihirV17/CompRobo-Warmup-Project/assets/123433158/21efe92e-2032-48d6-9a44-50cb0882dbc6
 
 
 
