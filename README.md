@@ -23,9 +23,15 @@ This script orchestrates a robot to move in a square pattern. In the __init__ co
 ## Description
 This program enables autonomous wall-following behavior for a robot using ROS. The WallFollow class serves as the core controller. It maintains forward_distance and backward_distance variables, representing front and rear laser scanner measurements. In the constructor (__init__), it sets up a ROS Node, schedules a loop to run at 10 Hz, and creates publishers for robot velocity commands (self.neato_pub) and laser scanner data subscriptions (self.scan_sub). The scan_callback function updates distance variables based on laser data, aiding debugging. In run_loop, it computes the required angular speed to maintain a set distance from a wall. The calculated angular speed is then used to create a Twist message, which contains angular and linear velocity components. The angular velocity is set based on the calculated value, while the linear velocity is set to move the robot forward at a constant rate. Finally, the Twist message is published to the cmd_vel topic using self.neato_pub, which sends the control commands to the robot's motors.This message is published via self.neato_pub to control the robot's motors. The main function initializes the ROS Node, creates a WallFollow instance, and enters a ROS loop for continuous execution. This program autonomously guides the robot along a wall, responding to laser scanner data.
 
-# Person Follow
+# Person Follow/Video
 ## Planning State Diagram
 ![image](https://github.com/MihirV17/CompRobo-Warmup-Project/assets/123433158/77d767d7-e872-4543-b340-e741c1546543)
+
+
+
+https://github.com/MihirV17/CompRobo-Warmup-Project/assets/123433158/c5092172-cc47-4feb-8de9-bd56f890b878
+
+
 ## Description
 This script enables a robot to follow a person by adjusting its orientation and forward movement based on laser scanner data, making it useful for applications such as person tracking or following in robotics. In the PersonFollower class, the constructor initializes a ROS 2 node named 'person_follower'. It creates a publisher for sending Twist messages to control the robot's velocity ('cmd_vel') and subscribes to laser scanner data from the 'scan' topic. Additionally, it sets up a timer with a callback named follow_person, which controls the robot's behavior over time. The laser_callback function is invoked when laser scan data is received. It analyzes the data to find the minimum distance and corresponding angle where a person might be detected. This angle is stored in the self.scan variable. The core functionality is implemented in the follow_person method. It calculates the velocity required to follow a person based on the angle of detection (self.scan). If the person is detected within certain angle thresholds (approximately in front of the robot), it maintains the robot's orientation without movement. If the person is detected to the right, the robot rotates counterclockwise, and if to the left, it rotates clockwise. Additionally, if the person is detected within certain forward-facing angles, the robot moves forward at a fixed linear velocity. The main function initializes the ROS 2 system, creates an instance of the PersonFollower class, enters the ROS 2 spin loop to handle communication and control logic, and finally shuts down the ROS 2 system upon completion.
 
@@ -36,7 +42,7 @@ This script enables a robot to follow a person by adjusting its orientation and 
 A finite state controller is a program or device that operates in distinct states, switching between them based on predefined rules or inputs.It operates through a finite state controller defined in the WallFollow class. Upon initialization, the class sets up laser scan and bump sensor subscriptions and creates a control timer. In the run_loop function, the robot alternates between "wall_follower" and "hit_obstacle" states. In the "wall_follower" state, it adjusts its angular speed based on laser scan data to follow walls while maintaining a safe linear velocity. Upon encountering an obstacle, it transitions to "hit_obstacle," executing a predefined sequence of reversing and rotating. The script provides detailed console debugging information. The main function initializes ROS 2, runs the controller, and closes ROS 2 upon completion. This script provides a versatile framework for autonomous navigation, especially in constrained environments, and adapts to obstacles efficiently.
 
 # Obstacle Avoidance
-## Planning State Diagram
+## Planning State Diagram/Video
 ![image](https://github.com/MihirV17/CompRobo-Warmup-Project/assets/123433158/154e4760-fa6b-4288-aeed-d19e11714049)
 
 https://github.com/MihirV17/CompRobo-Warmup-Project/assets/123433158/93e789f9-73fd-4259-93f7-d2eb77242dcf
